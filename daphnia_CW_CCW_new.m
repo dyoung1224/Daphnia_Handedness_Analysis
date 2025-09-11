@@ -1,3 +1,5 @@
+%% NOTE: THIS IS THE NEW CODE THAT HAS NEW ANIMATION FEATURES (PAUSE, SKIP, TIME RANGE, etc.), BUT THE CW/CCW ANALYSIS IS NOT CORRECT.
+
 function daphnia_CW_CCW
 % clc; close all; clearvars;
 
@@ -336,3 +338,4 @@ updateFrame(1);           % show first frame
         drawnow limitrate
     end
 end
+
