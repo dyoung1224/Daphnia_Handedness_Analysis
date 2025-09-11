@@ -85,7 +85,7 @@ This script helps identify **rotational bias (handedness)** in Daphnia motion, w
 
 ## Dependencies
 
-- MATLAB (tested on R2022b)  
+- MATLAB (tested on R2025a)  
 - Statistics & Machine Learning Toolbox (`fit` function)  
 
 ---
