@@ -4,10 +4,12 @@ function daphnia_CW_CCW
 % clc; close all; clearvars;
 
 %% ================== USER SETTINGS ==================
-pre  = 'C:\Users\swany\Videos\Daphnia\6-23,24-25\';
+% Dataset base name (e.g., experiment label)
 base = 'Multiple_6-23-24-25';
-csvs = '_csv';
-inputDir = fullfile(pre, [base csvs]);
+
+% Directory containing CSV files for each tracked Daphnia
+% NOTE: change 'path' and 'folder' to your actual location
+inputDir = fullfile('path', 'to', 'your', 'csv', 'folder', base, '_csv');
 
 d = 3;                        % 1-based selection (file uses d-1)
 csvFile = fullfile(inputDir, sprintf('%s_daphnia%d.csv', base, d-1));
@@ -338,5 +340,6 @@ updateFrame(1);           % show first frame
         drawnow limitrate
     end
 end
+
 
 
