@@ -1,23 +1,20 @@
 clear all;
-% Set the directory containing the CSV files
-% pre = 'D:\\David\\Output\\';
-% base = 'single_7_23';
-% csv = '_csv';
 
-pre = 'C:\\Users\\swany\\Videos\\Daphnia\\6-23,24-25\\';
+% Dataset base name (e.g., experiment label)
 base = 'Multiple_6-23-24-25';
-csv = '_csv';
 
-inputDir = strcat(pre,base,csv);
+% Directory containing CSV files for each tracked Daphnia
+% NOTE: change 'path' and 'folder' to your actual location
+inputDir = fullfile('path', 'to', 'your', 'csv', 'folder', base, '_csv');
+
+d = 3;                        % 1-based selection (file uses d-1)
+csvFile = fullfile(inputDir, sprintf('%s_daphnia%d.csv', base, d-1));
 
 % Number of daphnia
 N = 50;
 
 % Ask user for bin size
 binSize = 0.5;
-
-% Specific daphnia to focus on
-d = 3;
 
 timeWindow = 2; % seconds
 
@@ -399,3 +396,4 @@ title('Cumulative Angle with CW and CCW Regions');
 grid on;
 
 hold off;
+
